@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeram Kraskens — Portfolio</title>
+<meta name="description" content="Jeram Kraskens — Software Engineering undergraduate at NIBM. Front-end developer and UI/UX designer building web, mobile and IoT projects.">
+<meta name="theme-color" content="#0F172A">
+
+<meta property="og:title" content="Jeram Kraskens — Portfolio">
+<meta property="og:description" content="Software Engineering undergraduate at NIBM. Front-end developer and UI/UX designer.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/jeram.png">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <span class="loader-name">&lt;JERAM<i>/</i>&gt;</span>
+    <div class="loader-bar"><span id="loaderFill"></span></div>
+    <span class="loader-pct" id="loaderPct">0%</span>
+  </div>
+</div>
+
+<!-- ============ AMBIENT LAYERS ============ -->
+<canvas class="particles" id="particles" aria-hidden="true"></canvas>
+<div class="mesh" aria-hidden="true"></div>
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<a href="#about" class="skip-link">Skip to content</a>
+
+<div class="page">
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#hero">&lt;JERAM<span class="logo-slash">/</span>&gt;</a>
+    <ul class="navlinks">
+      <li><a href="#about" data-nav>About</a></li>
+      <li><a href="#skills" data-nav>Skills</a></li>
+      <li><a href="#projects" data-nav>Projects</a></li>
+      <li><a href="#education" data-nav>Education</a></li>
+      <li><a href="#contact" data-nav>Contact</a></li>
+    </ul>
+    <a class="nav-cta magnetic" href="#contact">Hire Me</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" data-close>About</a>
+  <a href="#skills" data-close>Skills</a>
+  <a href="#projects" data-close>Projects</a>
+  <a href="#education" data-close>Education</a>
+  <a href="#contact" data-close>Contact</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="hero">
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+      <span class="status anim" data-anim="1"><span class="live"></span> Available for Internship</span>
+
+      <h1 class="name">
+        <span class="mask"><span class="mask-in" data-anim="2">JERAM</span></span>
+        <span class="mask"><span class="mask-in grad" data-anim="3">KRASKENS</span></span>
+      </h1>
+
+      <p class="role anim" data-anim="4">
+        <span id="typed"></span><span class="caret" aria-hidden="true"></span>
+      </p>
+
+      <p class="hero-meta anim" data-anim="5">
+        Sri Lanka
+        <span class="sep">•</span>
+        <a href="mailto:jeramperera2006@gmail.com">jeramperera2006@gmail.com</a>
+      </p>
+
+      <p class="hero-sub anim" data-anim="6">
+        Software Engineering undergraduate at <strong>NIBM</strong>, building web, mobile and IoT
+        projects — and learning to design interfaces people actually enjoy using.
+      </p>
+
+      <div class="hero-cta anim" data-anim="7">
+        <a class="btn btn-primary magnetic" href="#projects">View My Work <span class="arrow">→</span></a>
+        <a class="btn magnetic" href="#contact">Get In Touch</a>
+      </div>
+
+      <div class="socials anim" data-anim="8">
+        <a href="https://linkedin.com/in/jeram-kraskens" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/jeramkraskens" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:jeramperera2006@gmail.com">Email</a>
+      </div>
+    </div>
+
+    <div class="portrait-stage anim" data-anim="4">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="glow-pool" aria-hidden="true"></div>
+
+      <!-- orbiting tech icons -->
+      <div class="orbit-field" aria-hidden="true">
+        <span class="orbit-ellipse"></span>
+
+        <div class="orbit orbit-a">
+          <span class="orbit-item" style="--a:0deg">
+            <span class="orbit-spin"><span class="chip" style="--c:#F7DF1E">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" loading="lazy">
+            </span></span>
+          </span>
+          <span class="orbit-item" style="--a:72deg">
+            <span class="orbit-spin"><span class="chip" style="--c:#61DAFB">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" loading="lazy">
+            </span></span>
+          </span>
+          <span class="orbit-item" style="--a:144deg">
+            <span class="orbit-spin"><span class="chip" style="--c:#F24E1E">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="" loading="lazy">
+            </span></span>
+          </span>
+          <span class="orbit-item" style="--a:216deg">
+            <span class="orbit-spin"><span class="chip" style="--c:#F89820">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" loading="lazy">
+            </span></span>
+          </span>
+          <span class="orbit-item" style="--a:288deg">
+            <span class="orbit-spin"><span class="chip" style="--c:#38BDF8">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="" loading="lazy">
+            </span></span>
+          </span>
+        </div>
+
+        <div class="orbit orbit-b">
+          <span class="orbit-item" style="--a:36deg">
+            <span class="orbit-spin"><span class="chip" style="--c:#8892BF">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="" loading="lazy">
+            </span></span>
+          </span>
+          <span class="orbit-item" style="--a:108deg">
+            <span class="orbit-spin"><span class="chip" style="--c:#4479A1">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" loading="lazy">
+            </span></span>
+          </span>
+          <span class="orbit-item" style="--a:180deg">
+            <span class="orbit-spin"><span class="chip" style="--c:#FFCA28">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="" loading="lazy">
+            </span></span>
+          </span>
+          <span class="orbit-item" style="--a:252deg">
+            <span class="orbit-spin"><span class="chip" style="--c:#54C5F8">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="" loading="lazy">
+            </span></span>
+          </span>
+          <span class="orbit-item" style="--a:324deg">
+            <span class="orbit-spin"><span class="chip" style="--c:#3C873A">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" loading="lazy">
+            </span></span>
+          </span>
+        </div>
+      </div>
+
+      <img class="portrait" id="portrait" src="assets/jeram.png"
+           alt="Portrait of Jeram Kraskens" width="415" height="738">
+    </div>
+  </div>
+
+  <!-- stat strip -->
+  <div class="wrap">
+    <div class="statbar reveal">
+      <div class="stat"><b class="count" data-to="3">0</b><span>Projects</span></div>
+      <div class="stat"><b class="count" data-to="9" data-suffix="+">0</b><span>Languages</span></div>
+      <div class="stat"><b class="count" data-to="20" data-suffix="+">0</b><span>Tools &amp; Tech</span></div>
+      <div class="stat"><b class="count" data-to="2">0</b><span>Year of Study</span></div>
+    </div>
+  </div>
+
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon-track">
+      <span>React</span><span>Figma</span><span>Node.js</span><span>Flutter</span><span>Laravel</span>
+      <span>MySQL</span><span>Arduino</span><span>Tailwind</span><span>Java</span><span>Firebase</span>
+      <span>React</span><span>Figma</span><span>Node.js</span><span>Flutter</span><span>Laravel</span>
+      <span>MySQL</span><span>Arduino</span><span>Tailwind</span><span>Java</span><span>Firebase</span>
+    </div>
+  </div>
+
+  <a class="scroll-hint" href="#about" aria-label="Scroll to about">
+    <span>scroll</span><i></i>
+  </a>
+</header>
+
+<main>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="wrap">
+  <span class="eyebrow reveal">About Me</span>
+  <h2 class="section-title reveal">
+    BUILDING INTERFACES<br><span class="grad">PEOPLE ENJOY USING</span>
+  </h2>
+
+  <div class="about-grid">
+    <div class="about reveal">
+      <p>I'm a <strong>Software Engineering undergraduate at NIBM</strong>, splitting my time between full-stack coursework and self-taught interface design.</p>
+      <p>Whether it's an e-commerce storefront, a marketplace, or an IoT dashboard, I follow the same habit: sketch the flow, build it, then keep refining the details — spacing, states, copy — until it feels right. My goal is to become a <strong>UI/UX designer who ships real, working products</strong>, not just mockups.</p>
+
+      <dl class="facts">
+        <div class="fact"><dt>Location</dt><dd>Sri Lanka</dd></div>
+        <div class="fact"><dt>Email</dt><dd><a href="mailto:jeramperera2006@gmail.com">jeramperera2006@gmail.com</a></dd></div>
+        <div class="fact"><dt>Studying</dt><dd>Software Engineering — NIBM</dd></div>
+        <div class="fact"><dt>Status</dt><dd>Open to internships &amp; freelance</dd></div>
+      </dl>
+
+      <a class="btn btn-primary magnetic" href="#contact">Contact Me <span class="arrow">→</span></a>
+    </div>
+
+    <div class="about-cards">
+      <article class="mini reveal tilt">
+        <span class="mini-icon">🎨</span>
+        <h3>UI / UX Design</h3>
+        <p>Figma · Illustrator · Photoshop · Wireframing · Prototyping</p>
+      </article>
+      <article class="mini reveal tilt">
+        <span class="mini-icon">💻</span>
+        <h3>Front-End Development</h3>
+        <p>React · Next.js · Tailwind · Bootstrap · Responsive UI</p>
+      </article>
+      <article class="mini reveal tilt">
+        <span class="mini-icon">🗄️</span>
+        <h3>Backend &amp; Databases</h3>
+        <p>Node.js · Laravel · Spring · MySQL · MongoDB · Firebase</p>
+      </article>
+      <article class="mini reveal tilt">
+        <span class="mini-icon">📱</span>
+        <h3>Mobile &amp; IoT</h3>
+        <p>Flutter · React Native · Kotlin · Arduino · Sensors</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="soft reveal">
+    <span class="soft-label">Soft Skills</span>
+    <div class="soft-tags">
+      <span>Communication</span><span>Team Collaboration</span><span>Problem-Solving</span>
+      <span>Attention to Detail</span><span>Adaptability</span><span>Time Management</span><span>Curiosity</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS (animated bars) ============ -->
+<section id="skills" class="wrap">
+  <span class="eyebrow reveal">Tech Stack</span>
+  <h2 class="section-title reveal">SKILLS &amp;<br><span class="grad">TECHNOLOGIES</span></h2>
+
+  <div class="skillgroups">
+
+    <div class="skillgroup reveal">
+      <h3 class="group-title"><i class="dot"></i> Languages</h3>
+      <div class="bar" data-level="85"><span class="bar-label">JavaScript</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="80"><span class="bar-label">Java</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="78"><span class="bar-label">PHP</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="72"><span class="bar-label">C#</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="70"><span class="bar-label">Python</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="68"><span class="bar-label">Dart</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+    </div>
+
+    <div class="skillgroup reveal">
+      <h3 class="group-title"><i class="dot"></i> Frontend &amp; Design</h3>
+      <div class="bar" data-level="90"><span class="bar-label">HTML5 &amp; CSS3</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="82"><span class="bar-label">React.js</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="80"><span class="bar-label">Figma / UI Design</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="78"><span class="bar-label">Tailwind CSS</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="74"><span class="bar-label">Next.js</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="72"><span class="bar-label">Flutter</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+    </div>
+
+    <div class="skillgroup reveal">
+      <h3 class="group-title"><i class="dot"></i> Backend &amp; Databases</h3>
+      <div class="bar" data-level="80"><span class="bar-label">MySQL</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="76"><span class="bar-label">Node.js</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="74"><span class="bar-label">Laravel</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="72"><span class="bar-label">Firebase</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="70"><span class="bar-label">MongoDB</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+    </div>
+
+    <div class="skillgroup reveal">
+      <h3 class="group-title"><i class="dot"></i> Tools &amp; Hardware</h3>
+      <div class="bar" data-level="85"><span class="bar-label">Git &amp; GitHub</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="80"><span class="bar-label">Photoshop / Illustrator</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="76"><span class="bar-label">Postman</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="75"><span class="bar-label">Arduino / IoT</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+      <div class="bar" data-level="70"><span class="bar-label">Android Studio</span><span class="bar-pct">0%</span><span class="bar-track"><i></i></span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="wrap">
+  <span class="eyebrow reveal">Work</span>
+  <h2 class="section-title reveal">PROJECTS</h2>
+  <p class="section-lede reveal">Real applications spanning e-commerce, marketplaces and connected hardware.</p>
+
+  <div class="proj-list">
+
+    <article class="proj reveal spotlight">
+      <div class="proj-num">01</div>
+      <div class="proj-body">
+        <span class="proj-meta">E-Commerce · Web Application</span>
+        <h3>Handicraft Shop</h3>
+        <p>An online store for a local handicraft business, built so small-batch handmade goods are easy to browse, compare and buy.</p>
+        <ul class="proj-points">
+          <li>Built product listing, category and detail pages from scratch.</li>
+          <li>Implemented cart and checkout flow with server-side validation.</li>
+          <li>Designed a responsive layout that works down to small phones.</li>
+          <li>Structured the database for products, orders and customers.</li>
+        </ul>
+        <div class="tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>CSS3</span></div>
+        <div class="proj-foot">
+          <span class="proj-role">Role: Full-Stack Developer</span>
+          <a class="proj-link" href="https://github.com/jeramkraskens" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+        <span class="repo">grocery-store</span>
+      </div>
+    </article>
+
+    <article class="proj reveal spotlight">
+      <div class="proj-num">02</div>
+      <div class="proj-body">
+        <span class="proj-meta">E-Commerce · Web Application</span>
+        <h3>Smart Gadget Marketplace v2</h3>
+        <p>A marketplace for electronics and smart gadgets — the second iteration, rebuilt around a cleaner browsing and checkout experience.</p>
+        <ul class="proj-points">
+          <li>Rebuilt the interface as reusable component-based views.</li>
+          <li>Added product filtering and search across categories.</li>
+          <li>Streamlined the checkout into fewer, clearer steps.</li>
+          <li>Connected the front end to a document-based product store.</li>
+        </ul>
+        <div class="tags"><span>React</span><span>Node.js</span><span>MongoDB</span><span>REST API</span></div>
+        <div class="proj-foot">
+          <span class="proj-role">Role: Full-Stack Developer</span>
+          <a class="proj-link" href="https://github.com/jeramkraskens" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+        <span class="repo">smart-gadget-marketplace-v2</span>
+      </div>
+    </article>
+
+    <article class="proj reveal spotlight">
+      <div class="proj-num">03</div>
+      <div class="proj-body">
+        <span class="proj-meta">IoT · Hardware + Software</span>
+        <h3>FuelMonitor</h3>
+        <p>An IoT fuel-level monitoring system that reads tank levels in real time and pushes them to a connected dashboard, so refills stop being a guessing game.</p>
+        <ul class="proj-points">
+          <li>Wired and calibrated the fuel-level sensor to a microcontroller.</li>
+          <li>Streamed live readings to a cloud realtime database.</li>
+          <li>Built a dashboard view showing current level and history.</li>
+          <li>Added low-level alerting so refills happen before empty.</li>
+        </ul>
+        <div class="tags"><span>Arduino</span><span>IoT Sensors</span><span>Firebase</span><span>C++</span></div>
+        <div class="proj-foot">
+          <span class="proj-role">Role: Developer</span>
+          <a class="proj-link" href="https://github.com/jeramkraskens" target="_blank" rel="noopener">↗ GitHub</a>
+        </div>
+        <span class="repo">FuelMonitor</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education" class="wrap">
+  <span class="eyebrow reveal">Background</span>
+  <h2 class="section-title reveal">EDUCATION</h2>
+
+  <div class="edu reveal">
+    <div class="edu-icon">🎓</div>
+    <div class="edu-body">
+      <span class="edu-meta">// Undergraduate · Ongoing</span>
+      <h3>Software Engineering</h3>
+      <p class="edu-org">NIBM — National Institute of Business Management</p>
+      <p>Studying software engineering with a focus on full-stack web development, object-oriented programming, databases and interface design. Building coursework and personal projects across web, mobile and embedded systems.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="wrap">
+  <span class="eyebrow reveal">Let's Talk</span>
+  <h2 class="section-title reveal">GET IN<br><span class="grad">TOUCH</span></h2>
+  <p class="section-lede reveal">I'm looking for a Software Engineering internship or freelance front-end / UI-UX work. If you have an opportunity — or just want to connect — I'd love to hear from you.</p>
+
+  <div class="contact-grid">
+    <div class="contact-methods reveal">
+      <a class="method" href="mailto:jeramperera2006@gmail.com">
+        <span class="method-icon">📧</span>
+        <span class="method-text"><b>Email</b>jeramperera2006@gmail.com</span>
+      </a>
+      <a class="method" href="https://linkedin.com/in/jeram-kraskens" target="_blank" rel="noopener">
+        <span class="method-icon">💼</span>
+        <span class="method-text"><b>LinkedIn</b>linkedin.com/in/jeram-kraskens</span>
+      </a>
+      <a class="method" href="https://github.com/jeramkraskens" target="_blank" rel="noopener">
+        <span class="method-icon">⌨️</span>
+        <span class="method-text"><b>GitHub</b>github.com/jeramkraskens</span>
+      </a>
+      <div class="method method-static">
+        <span class="method-icon">📍</span>
+        <span class="method-text"><b>Location</b>Sri Lanka</span>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="contactForm" novalidate>
+      <span class="form-title">Send a Message</span>
+
+      <label class="field">
+        <span>Your Name</span>
+        <input type="text" name="name" id="fName" required autocomplete="name" placeholder="Jane Perera">
+      </label>
+
+      <label class="field">
+        <span>Email Address</span>
+        <input type="email" name="email" id="fEmail" required autocomplete="email" placeholder="jane@company.com">
+      </label>
+
+      <label class="field">
+        <span>Message</span>
+        <textarea name="message" id="fMessage" rows="5" required placeholder="Tell me about the role or project…"></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-primary form-btn">Send Message <span class="arrow">→</span></button>
+      <p class="form-note" id="formNote" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a class="logo footer-logo" href="#hero">&lt;JERAM<span class="logo-slash">/</span>&gt;</a>
+    <span class="footer-line">Jeram Kraskens · Software Engineering Undergraduate</span>
+    <span class="footer-line">© <span id="year">2026</span> · Designed &amp; built in Sri Lanka</span>
+  </div>
+</footer>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
