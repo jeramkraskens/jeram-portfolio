@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="480" y1="0" x2="480" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#14345B"/><stop offset=".52" stop-color="#317A92"/><stop offset="1" stop-color="#F4A66C"/></linearGradient>
+    <linearGradient id="sea" x1="0" y1="304" x2="960" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#297F8A"/><stop offset="1" stop-color="#123F5E"/></linearGradient>
+    <linearGradient id="sand" x1="605" y1="300" x2="858" y2="493" gradientUnits="userSpaceOnUse"><stop stop-color="#EAB77D"/><stop offset="1" stop-color="#A86D55"/></linearGradient>
+    <radialGradient id="sun" cx="0" cy="0" r="1" gradientTransform="matrix(0 135 -135 0 712 155)" gradientUnits="userSpaceOnUse"><stop stop-color="#FFD798"/><stop offset="1" stop-color="#FFD798" stop-opacity="0"/></radialGradient>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h960v520H0z"/><circle cx="712" cy="155" r="135" fill="url(#sun)"/><circle cx="712" cy="155" r="48" fill="#FFD99D" fill-opacity=".92"/>
+  <path d="M0 285c125-43 219-29 345 2 113 28 215 10 333-18 103-24 189-12 282 9v242H0V285Z" fill="url(#sea)"/>
+  <path d="M0 350c143-16 248 20 378 14 123-5 206-37 333-29 96 6 170 22 249 14" stroke="#A9E5D7" stroke-opacity=".48" stroke-width="5"/>
+  <path d="M616 347c82-29 142-30 229-12 45 9 83 27 115 48v137H632c27-34 42-80-16-173Z" fill="url(#sand)"/>
+  <path d="M141 334c20-84 22-136 19-178-2-35 10-69 44-96-14 43-7 72 8 104 17 38 28 93 14 165" fill="#274C4D"/><path d="M203 83c-36-33-80-45-126-34 34 8 58 26 87 52-43-5-76 5-102 31 45-12 81-8 118 5 12-18 20-36 23-54Z" fill="#4F8771"/>
+  <path d="M270 340c12-68 14-113 11-148-2-29 9-55 34-76-10 32-5 55 6 80 12 30 20 76 10 133" fill="#304A46"/><path d="M311 140c-28-23-60-31-93-23 25 6 43 19 64 37-31-4-55 4-74 22 32-9 58-6 85 3 9-13 15-26 18-39Z" fill="#69A07F"/>
+  <path d="M448 160l28 30 42-21-20 35 25 29-38-7-22 35-2-42-38-12 39-12 6-35Z" fill="#FFF5DF" fill-opacity=".82"/>
+  <path d="M748 385c38 8 75 24 105 49M693 422c45 7 77 23 105 42" stroke="#FFE0AE" stroke-opacity=".68" stroke-width="5" stroke-linecap="round"/>
+</svg>
